@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffb3e1;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .gif {
+            width: 500px;
+            height: auto;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #yesBtn {
+            background-color: #008129;
+            color: white;
+            font-family: 'Poppins', sans-serif
+        }
+
+        #noBtn {
+            background-color: #c10000;
+            font-family: 'Poppins', sans-serif
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            line-height: 3vw;
+            letter-spacing: -3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Will you be my Valentine? 💖</h1>
+        <img src="https://media.tenor.com/LMz_TrIOxV8AAAAM/mr-bean-mrbean.gif" class="gif" id="proposalGif">
+        <div class="buttons">
+            <button id="yesBtn" onclick="acceptProposal()">Yes</button>
+            <button id="noBtn" onclick="growYesButton()">No</button>
+        </div>
+    </div>
+
+    <script>
+        let yesButton = document.getElementById("yesBtn");
+        let noButton = document.getElementById("noBtn");
+        let proposalGif = document.getElementById("proposalGif");
+        let size = 16;
+
+        function growYesButton() {
+            size += 10;
+            yesButton.style.fontSize = size + "px";
+        }
+
+        function acceptProposal() {
+            document.querySelector("h1").innerText = "Yay! I Love Youuu<3 ❤️";
+            proposalGif.src = "https://media1.tenor.com/m/YxipgHzUgTQAAAAd/celebrate-grizzly-bear.gif";
+            noButton.style.display = "none";
+            yesButton.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
